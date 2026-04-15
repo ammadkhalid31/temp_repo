@@ -1,2 +1,2 @@
 # temp_repo
-POC repo 1
+POC repo 2
