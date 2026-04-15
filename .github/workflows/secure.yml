@@ -1,0 +1,16 @@
+name: Branch Injection Safe Example
+
+on:
+  pull_request:
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+
+    env:
+      BRANCH_NAME: ${{ github.head_ref }}
+
+    steps:
+      - name: Safe Usage
+        run: |
+          echo "Deploying branch $BRANCH_NAME"
